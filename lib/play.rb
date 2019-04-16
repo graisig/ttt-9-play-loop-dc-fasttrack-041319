@@ -16,11 +16,11 @@ def move(board, index, current_player = "X")
 end
 
 def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+  return board[location] != " " && board[location] != ""
 end
 
 def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
+  return index.between?(0,8) && !position_taken?(board, index)
 end
 
 def turn(board)
